@@ -14,7 +14,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="antialiased">
+<body class="antialiased dark:bg-gray-600">
     <div class="flex justify-center items-center p-4">
         <div class="paginate-buttons-group inline-flex rounded-md shadow-sm hidden" role="group">
         </div>
@@ -138,6 +138,7 @@
                         movieCoverDiv.classList.add('overflow-hidden')
                         movieCoverDiv.classList.add('shadow-inner')
                         movieCoverDiv.classList.add('border')
+                        movieCoverDiv.classList.add('dark:border-gray-700')
                         const movieDetail = document.createElement('div')
                         movieDetail.classList.add('p-5')
                         const movieTitle = document.createElement('h5')

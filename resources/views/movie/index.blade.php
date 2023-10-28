@@ -14,10 +14,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="antialiased">
+<body class="antialiased dark:bg-gray-600">
     <div class="w-screen h-screen flex flex-col md:flex-row justify-center items-center gap-4">
-        <a href="{{ route('movie.paginate-scroll') }}" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">{{ __('Movies in grid scroll') }}</a>
-        <a href="{{ route('movie.paginate-button') }}" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">{{ __('Movies in grid button') }}</a>
+        <a href="{{ route('movie.paginate-scroll') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">{{ __('Movies in grid scroll') }}</a>
+        <a href="{{ route('movie.paginate-button') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">{{ __('Movies in grid button') }}</a>
     </div>
 </body>
 

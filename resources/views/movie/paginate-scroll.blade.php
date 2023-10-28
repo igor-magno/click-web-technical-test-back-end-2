@@ -21,7 +21,7 @@
     </style>
 </head>
 
-<body class="antialiased overflow-hidden">
+<body class="antialiased overflow-hidden dark:bg-gray-600">
     <div id="movies-grid" class="movies-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4 p-4"></div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -86,6 +86,7 @@
                                 movieCoverDiv.classList.add('overflow-hidden')
                                 movieCoverDiv.classList.add('shadow-inner')
                                 movieCoverDiv.classList.add('border')
+                                movieCoverDiv.classList.add('dark:border-gray-700')
                                 const movieDetail = document.createElement('div')
                                 movieDetail.classList.add('p-5')
                                 const movieTitle = document.createElement('h5')
