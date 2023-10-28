@@ -27,7 +27,7 @@
         document.addEventListener("DOMContentLoaded", function() {
             const elementMoviesGrid = document.getElementById("movies-grid")
             let isLoading = false
-            let page = 1
+            let nextPage = null
 
             function addLoading() {
                 const loadingContainer = document.createElement('div')
@@ -60,12 +60,12 @@
                 if (elementMoviesGrid.scrollTop + elementMoviesGrid.clientHeight >= elementMoviesGrid.scrollHeight - 20) {
                     isLoading = true;
                     addLoading();
-                    fetch("{{ $_ENV['APP_URL'] }}/movie?page=" + page)
+                    fetch("{{ $_ENV['APP_URL'] }}/movie?page=" + (nextPage != null ? nextPage : ''))
                         .then(response => {
                             return response.json()
                         })
                         .then(response => {
-                            page = response.nextPage
+                            nextPage = response.nextPage
                             response.movies.forEach(movie => {
                                 const movieCard = document.createElement('div')
                                 movieCard.classList.add('max-w-sm')

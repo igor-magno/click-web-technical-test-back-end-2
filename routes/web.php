@@ -22,11 +22,15 @@ Route::get('/paginate-scroll', function () {
     return view('movie.paginate-scroll');
 })->name('movie.paginate-scroll');
 
+Route::get('/paginate-button', function () {
+    return view('movie.paginate-button');
+})->name('movie.paginate-button');
+
 Route::get('/movie', function (Request $request) {
-    $page = $request->get('page') ?? 1;
+    $page = $request->get('page') ?? '/titles?page=1';
     $curl = curl_init();
     curl_setopt_array($curl, [
-        CURLOPT_URL => "https://moviesdatabase.p.rapidapi.com/titles?page={$page}",
+        CURLOPT_URL => "https://moviesdatabase.p.rapidapi.com$page",
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_ENCODING => "",
         CURLOPT_MAXREDIRS => 10,
@@ -58,7 +62,8 @@ Route::get('/movie', function (Request $request) {
     }, $response->results);
     return response()->json((object)[
         'movies' => $movies,
-        'requestPage' => $page,
-        'nextPage' => $page + 1
+        'previousPage' => $page == '/titles?page=1' ? null : '/titles?page=' . ($response->page - 1),
+        'currentPage' => $response->page,
+        'nextPage' => $response->next
     ], 200);
 });
