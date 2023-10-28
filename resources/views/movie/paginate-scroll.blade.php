@@ -132,9 +132,9 @@
                             })
                         })
                         .catch(error => {
-                            console.error(error)
                             isLoading = false
                             removeLoading()
+                            alert(error)
                         })
                 }
             }
