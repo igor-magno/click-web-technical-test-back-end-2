@@ -16,8 +16,8 @@
 
 <body class="antialiased dark:bg-gray-600">
     <div class="w-screen h-screen flex flex-col md:flex-row justify-center items-center gap-4">
-        <a href="{{ route('movie.paginate-scroll') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">{{ __('Movies in grid scroll') }}</a>
-        <a href="{{ route('movie.paginate-button') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">{{ __('Movies in grid button') }}</a>
+        <a href="{{ route('movie.paginate-scroll') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">{{ __('movie.index.movies_in_grid_scroll') }}</a>
+        <a href="{{ route('movie.paginate-button') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">{{ __('movie.index.movies_in_grid_button') }}</a>
     </div>
 </body>
 
