@@ -1,4 +1,5 @@
 {
     "movie.index.movies_in_grid_scroll": "Grade de filmes com scroll infinito",
-    "movie.index.movies_in_grid_button": "Grade de filmes sem scroll infinito"
+    "movie.index.movies_in_grid_button": "Grade de filmes sem scroll infinito",
+    "movie.film_catalog": "Catálogo de filmes"
 }
